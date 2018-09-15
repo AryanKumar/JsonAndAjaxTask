@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JsonFormData</title>
+</head>
+<body>
+    <form id="form">
+        Name<input type="text" value="Aryan"/><br/>
+        Surname<input type="text" value="Kumar"/><br/>
+        Email<input type="email" value="Aryan4983@gmail.com"/><br/>
+        Password<input type="password" value="12345"/><br/>
+        <input type="submit" value="sumit"/>
+    </form>
+</body>
+</html>
+
+<script rel="text/javascript">
+    var formObject = document.getElementById("form");
+    formObject.addEventListener("submit", function(e){
+        e.preventDefault();
+        alert("hi");
+        var formvalue = new FormData('form');
+        console.log(formvalue.values);
+       
+    });
+</script>
